@@ -1,0 +1,82 @@
+public class Magazine {
+	
+		int magazyn [] = new int[3];
+		public int  rozmiarA=0;
+		public int  rozmiarB=0;
+		public int  rozmiarC=0;
+		public int maksymalneA=100;
+		int maksymalneB=200;
+		int maksymalneC=250;
+		double sprzedazC=1/2;
+		double sprzedazA=1/4;
+		double sprzedazB= 1/3;
+		
+		public void show_magazyn() {
+			System.out.print("A: "+rozmiarA+" ") ;
+			System.out.print("B: "+rozmiarB+" ") ;
+			System.out.println("C: "+rozmiarC+" ") ;
+		}
+		
+		
+	        
+	        
+		public void makeC() {
+			//C
+			int C=12;
+			while(rozmiarC<=maksymalneC && C>0) {
+				rozmiarC+=1;
+				C--;
+				
+			}
+		}
+		
+		public void makeB()	{
+			for(int i=1;i<=10;i++) {
+				if(rozmiarB<=maksymalneB) {
+					rozmiarB +=1;
+				}
+			}
+		}
+			
+		public void makeA() {
+			for(int i=1;i<=3;i++) {
+				if(rozmiarB>1 &&rozmiarC>2) {
+					rozmiarA+=1;
+					rozmiarB-=1;
+					rozmiarC-=2;
+					
+				}
+			}
+		}
+		public void sprzedazA() {
+			if(rozmiarA*sprzedazA > 3 ) {
+		
+				rozmiarA-=3;
+			}else if (rozmiarA*sprzedazA < 3 && rozmiarA*sprzedazA > 0) {
+				
+				rozmiarA -= (int)Math.floor(rozmiarA*sprzedazA);
+			}else
+				return;
+		}
+		
+		public void sprzedazB() {
+			if(rozmiarB*sprzedazB > 10) {
+				rozmiarB =- 10;
+			}else if(rozmiarB*sprzedazB < 10 && rozmiarB > 0) {
+				
+				rozmiarB -= (int)Math.floor(rozmiarB*sprzedazB);
+			}else
+				return ;
+		}
+		public void sprzedazC() {
+			if(rozmiarC*sprzedazC > 12) {
+				rozmiarC -= 12;
+			}else if(rozmiarC*sprzedazC < 12 && rozmiarC*sprzedazC>0) {
+				
+				rozmiarC -= (int)Math.floor(rozmiarC*sprzedazC);
+			}else
+				return ;
+		}
+		
+		
+	}
