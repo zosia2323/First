@@ -1,0 +1,19 @@
+public class Sprzedaz {
+	public static void main (String arg[]) {
+		Magazine x= new Magazine();
+		int i =5;
+		while(i>0) {
+			x.makeC();
+			x.makeB();
+			x.makeA();
+			x.show_magazyn();
+			x.sprzedazA();
+			x.sprzedazB();
+			x.sprzedazC();
+			x.show_magazyn();
+			i--;
+		}
+		
+	}
+	
+	
